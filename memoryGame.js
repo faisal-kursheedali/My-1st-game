@@ -80,12 +80,17 @@ document.addEventListener("DOMContentLoaded",()=>{
         var cards=document.querySelectorAll('img');
         const optionOneId=cardChosedId[0];
         const optionTwoId=cardChosedId[1];
-        if(cardChosen[0]===cardChosen[1]){
+        if(optionOneId===optionTwoId){
+            messageBox.textContent=" Select two different cards";
+            cards[optionOneId].setAttribute("src","png/question-mark.png");
+            cards[optionTwoId].setAttribute("src","png/question-mark.png");
+        }
+        else if(cardChosen[0]===cardChosen[1]){
             messageBox.textContent=" Wow you got it right ";
             cards[optionOneId].setAttribute("src","png/blank.png");
             cards[optionTwoId].setAttribute("src","png/blank.png");
             cardWon.push(cardChosen);
-        }else{
+        } else{
             messageBox.textContent=" sorry try gain";
             cards[optionOneId].setAttribute("src","png/question-mark.png");
             cards[optionTwoId].setAttribute("src","png/question-mark.png");
