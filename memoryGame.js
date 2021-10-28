@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         cardChosen=[];
         showResult.textContent="Your score : "+cardWon.length+"/6";
         if(cardWon.length==cardArray.length/2){
-            messageBox.textContent=" congradulation You found them all ";
+            messageBox.innerHTML=" congradulation You found them all, " +`<br>Reload the page to PLAY AGAIN !!!!!`
             showResult.textContent="Your score : "+cardWon.length+"/6";
         }
         
